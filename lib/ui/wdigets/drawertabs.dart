@@ -13,7 +13,9 @@ class drawertabes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){},
+      onTap: (){
+        ontab();
+      },
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Row(children: [

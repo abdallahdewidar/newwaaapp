@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:news_app/Modle/catgroiesmodle.dart';
 import 'package:news_app/ui/customDrawer.dart';
 import 'package:news_app/ui/wdigets/catgroies%20tab.dart';
 import 'package:news_app/ui/wdigets/settingstab.dart';
@@ -35,16 +36,19 @@ class _HomescreenState extends State<Homescreen> {
   }
 
   selecteddrawertab(menutab tab){
+    Navigator.pop(context);
     switch(tab){
 
       case menutab.Catogries:{
         selectedtab=catgriostab();
 
       }
+
 print("ssssssssssssssss");
       case menutab.Settings:{
         selectedtab=settingstab();
     }
+
     print("miiiiiiijbjs");
 setState(() {
 
