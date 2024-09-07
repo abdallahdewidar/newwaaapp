@@ -6,6 +6,8 @@ import 'package:news_app/ui/customDrawer.dart';
 import 'package:news_app/ui/wdigets/catgroies%20tab.dart';
 import 'package:news_app/ui/wdigets/settingstab.dart';
 
+import '../wdigets/catgories detils.dart';
+
 class Homescreen extends StatefulWidget {
   static const String routeName="Home screen";
   Homescreen({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
- Widget selectedtab=catgriostab();
+ Widget selectedtab=catgriostab(onCategoryClick:selectCategoryItem ,);
 
   @override
   Widget build(BuildContext context) {
@@ -40,11 +42,12 @@ class _HomescreenState extends State<Homescreen> {
     switch(tab){
 
       case menutab.Catogries:{
-        selectedtab=catgriostab();
+        selectedtab=catgriostab(onCategoryClick: (String ) {  },);
+        print("ssssssssssssssss");
 
       }
 
-print("ssssssssssssssss");
+
       case menutab.Settings:{
         selectedtab=settingstab();
     }
@@ -54,4 +57,11 @@ setState(() {
 
 });
   }
-}}
+} selectCategoryItem(String categoryId){
+   selectedtab = catgroiesdetials(  catgoryid: categoryId,);
+   setState(() {
+
+   });
+ }
+}
+

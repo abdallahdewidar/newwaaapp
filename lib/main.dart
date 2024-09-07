@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: Appstlye.lighttheme,
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false ,
       themeMode: ThemeMode.light,
       routes:{
         Homescreen.routeName:(_)=>Homescreen()
